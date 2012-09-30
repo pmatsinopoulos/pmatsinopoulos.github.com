@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: on | pmatsinopoulos Blog]]></title>
-  <link href="http://pmatsinopoulos.github.com/blog/categories/on/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Ruby on Rails | pmatsinopoulos Blog]]></title>
+  <link href="http://pmatsinopoulos.github.com/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://pmatsinopoulos.github.com/"/>
-  <updated>2012-09-30T14:19:50+03:00</updated>
+  <updated>2012-09-30T14:22:40+03:00</updated>
   <id>http://pmatsinopoulos.github.com/</id>
   <author>
     <name><![CDATA[Panayotis Matsinopoulos]]></name>
