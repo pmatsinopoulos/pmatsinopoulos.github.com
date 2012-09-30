@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - pmatsinopoulos Blog</title>
+  <title>Executing Migration Commands from Rails Console - pmatsinopoulos Blog</title>
   <meta name="author" content="Panayotis Matsinopoulos">
 
   
-  <meta name="description" content="Blog Archive 2012 Executing Migration Commands from Rails Console
-Sep 25 2012 posted in Rails, Ruby, on Recent Posts Executing Migration Commands &hellip;">
+  <meta name="description" content="Did you know that you can execute migration commands from rails console? Assume that you want to change the column &#8216;name&#8217; of the &#8216; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ Sep 25 2012 posted in Rails, Ruby, on Recent Posts Executing Migration Commands 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://pmatsinopoulos.github.com/blog/archives/">
+  <link rel="canonical" href="http://pmatsinopoulos.github.com/blog/2012/09/25/executing-migration-commands-from-rails-console/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -66,35 +65,99 @@ Sep 25 2012 posted in Rails, Ruby, on Recent Posts Executing Migration Commands 
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Executing Migration Commands From Rails Console</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-25T20:19:00+03:00" pubdate data-updated="true">25 Sep 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>Did you know that you can execute migration commands from rails console? Assume that you want to change the column &#8216;name&#8217; of the &#8216;Product&#8217; model, to have a limit of 32 characters and set it to not null. Here is what you can do:</p>
 
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h1><a href="/blog/2012/09/25/executing-migration-commands-from-rails-console/">Executing Migration Commands from Rails Console</a></h1>
-<time datetime="2012-09-25T20:19:00+03:00" pubdate><span class='month'>Sep</span> <span class='day'>25</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/on/'>on</a></span>
-</footer>
-
-
-</article>
+<figure class='code'><figcaption><span>Example of ActiveRecord Migration run from Rails Console</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">$</span> <span class="n">rails</span> <span class="n">c</span>
+</span><span class='line'><span class="o">&gt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span><span class="o">.</span><span class="n">change_column</span> <span class="ss">:products</span><span class="p">,</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:string</span><span class="p">,</span> <span class="ss">:limit</span> <span class="o">=&gt;</span> <span class="mi">32</span><span class="p">,</span> <span class="ss">:null</span> <span class="o">=&gt;</span> <span class="kp">false</span>
+</span><span class='line'><span class="o">--</span> <span class="n">change_column</span><span class="p">(</span><span class="ss">:products</span><span class="p">,</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:string</span><span class="p">,</span> <span class="p">{</span><span class="ss">:limit</span><span class="o">=&gt;</span><span class="mi">32</span><span class="p">})</span>
+</span><span class='line'><span class="p">(</span><span class="mi">38</span><span class="o">.</span><span class="mi">1</span><span class="n">ms</span><span class="p">)</span>  <span class="no">ALTER</span> <span class="no">TABLE</span> <span class="sb">`products`</span> <span class="no">CHANGE</span> <span class="sb">`name`</span> <span class="sb">`name`</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="no">NOT</span> <span class="no">NULL</span>
+</span><span class='line'><span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mo">03</span><span class="mi">96</span><span class="n">s</span>
+</span><span class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Panayotis Matsinopoulos</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-25T20:19:00+03:00" pubdate data-updated="true">25 Sep 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/on/'>on</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://pmatsinopoulos.github.com/blog/2012/09/25/executing-migration-commands-from-rails-console/" data-via="pmatsino" data-counturl="http://pmatsinopoulos.github.com/blog/2012/09/25/executing-migration-commands-from-rails-console/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
