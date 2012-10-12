@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | pmatsinopoulos Blog]]></title>
+  <link href="http://pmatsinopoulos.github.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://pmatsinopoulos.github.com/"/>
+  <updated>2012-10-12T21:59:02+03:00</updated>
+  <id>http://pmatsinopoulos.github.com/</id>
+  <author>
+    <name><![CDATA[Panayotis Matsinopoulos]]></name>
+    <email><![CDATA[panayotis@matsinopoulos.gr]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Including VS extending a Module]]></title>
+    <link href="http://pmatsinopoulos.github.com/blog/2012/10/12/including-vs-extending-a-module/"/>
+    <updated>2012-10-12T21:44:00+03:00</updated>
+    <id>http://pmatsinopoulos.github.com/blog/2012/10/12/including-vs-extending-a-module</id>
+    <content type="html"><![CDATA[<p><code>`` ruby Demonstration of</code>include<code>vs</code>extend`</p>
+
+<h1>Here, I am define a "module" with name Ma. I also define two methods. One without "self."</h1>
+
+<h1>and one with. See, later on, what happens when I "include" and what happens when I "extend"</h1>
+
+<h1>the "module" within a "class".</h1>
+
+<p>#
+module Ma
+  # I will be able to make this method an instance or a class method of a class.
+  # It depends whether I will "include" or "extend" the module in the class.
+  # Note that this method, I cannot call it directly on Ma. In order for this method
+  # to be useful, I have to include or extend this module within a class.
+  #
+  def ma_method1</p>
+
+<pre><code>puts "ma_method1"
+</code></pre>
+
+<p>  end</p>
+
+<p>  # This method, is not reusable, in the sense that I cannot make it be an instance of class
+  # method of a class. But still, it is a method of module Ma and I can call it directly.
+  #
+  def self.ma_method2</p>
+
+<pre><code>puts "ma_method2"
+</code></pre>
+
+<p>  end
+end</p>
+
+<p>puts "Ma responds to ma_method1? : #{Ma.respond_to?(:ma_method1)}" # it will print "false"
+puts "Ma responds to ma_method2? : #{Ma.respond_to?(:ma_method2)}" # it will print "true"
+puts "-------------"</p>
+
+<p>class A
+  # "include" sets the module methods as instance methods of the class
+  include Ma
+end</p>
+
+<p>a = A.new
+puts "a Responds to ma_method1?: #{a.respond_to?(:ma_method1)}" # it will print "true"
+puts "A Responds to ma_method1?: #{A.respond_to?(:ma_method1)}" # it will print "false"
+puts "a Responds to ma_method2?: #{a.respond_to?(:ma_method2)}" # it will print "false"
+puts "A Responds to ma_method2?: #{A.respond_to?(:ma_method2)}" # it will print "false"
+puts "-------------"</p>
+
+<p>class B
+  # "extend" sets the module methods as class methods of the class
+  extend Ma
+end</p>
+
+<p>b = B.new
+puts "b Responds to ma_method1? : #{b.respond_to?(:ma_method1)}" # it will print "false"
+puts "B Responds to ma_method1? : #{B.respond_to?(:ma_method1)}" # it will print "true"
+puts "b responds to ma_method2? : #{b.respond_to?(:ma_method2)}"  # it will print "false"
+puts "B responds to ma_method2? : #{B.respond_to?(:ma_method2)}" # it will print "false"
+puts "-------------------"
+```</p>
+]]></content>
+  </entry>
+  
+</feed>
