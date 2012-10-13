@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | pmatsinopoulos Blog]]></title>
   <link href="http://pmatsinopoulos.github.com/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://pmatsinopoulos.github.com/"/>
-  <updated>2012-10-12T21:59:02+03:00</updated>
+  <updated>2012-10-13T15:48:36+03:00</updated>
   <id>http://pmatsinopoulos.github.com/</id>
   <author>
     <name><![CDATA[Panayotis Matsinopoulos]]></name>
@@ -40,7 +40,7 @@ module Ma
 
 <p>  end</p>
 
-<p>  # This method, is not reusable, in the sense that I cannot make it be an instance of class
+<p>  # This method, is not reusable, in the sense that I cannot make it be an instance or class
   # method of a class. But still, it is a method of module Ma and I can call it directly.
   #
   def self.ma_method2</p>
@@ -79,6 +79,10 @@ puts "b responds to ma_method2? : #{b.respond_to?(:ma_method2)}"  # it will prin
 puts "B responds to ma_method2? : #{B.respond_to?(:ma_method2)}" # it will print "false"
 puts "-------------------"
 ```</p>
+
+<p>But you can also <code>include</code> or <code>extend</code> a <code>module</code> in another <code>module</code> too. Read this gist by
+<a href="https://gist.github.com/pglombardo">pglombardo</a> who has kindly appended to the above
+piece of code.</p>
 ]]></content>
   </entry>
   

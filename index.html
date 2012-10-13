@@ -197,7 +197,7 @@
 </span><span class='line'>    <span class="nb">puts</span> <span class="s2">&quot;ma_method1&quot;</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="c1"># This method, is not reusable, in the sense that I cannot make it be an instance of class</span>
+</span><span class='line'>  <span class="c1"># This method, is not reusable, in the sense that I cannot make it be an instance or class</span>
 </span><span class='line'>  <span class="c1"># method of a class. But still, it is a method of module Ma and I can call it directly.</span>
 </span><span class='line'>  <span class="c1">#</span>
 </span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">ma_method2</span>
@@ -235,7 +235,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-
+<p>But you can also <code>include</code> or <code>extend</code> a <code>module</code> in another <code>module</code> too. Read this gist by
+<a href="https://gist.github.com/pglombardo">pglombardo</a> who has kindly appended to the above
+piece of code.</p>
 </div>
   
   
