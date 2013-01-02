@@ -24,7 +24,7 @@
     </url>
     <url>
         <loc>http://pmatsinopoulos.github.com/</loc>
-        <lastmod>2012-11-03T16:21:08+02:00</lastmod>
+        <lastmod>2013-01-01T23:33:12+02:00</lastmod>
     </url>
     <url>
         <loc>http://pmatsinopoulos.github.com/blog/archives/</loc>
@@ -33,5 +33,9 @@
     <url>
         <loc>http://pmatsinopoulos.github.com/seminars/introduction-to-programming-nov-2012/</loc>
         <lastmod>2012-11-03T16:07:04+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://pmatsinopoulos.github.com/projects/ezmta/</loc>
+        <lastmod>2013-01-02T00:28:54+02:00</lastmod>
     </url>
 </urlset>
